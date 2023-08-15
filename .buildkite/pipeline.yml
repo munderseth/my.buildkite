@@ -9,7 +9,7 @@ steps:
     commands:
       - echo "Testspace push content"
       - setx CI true
-      testspace config url munderseth.testspace.com
-      testspace results.xml
+      - testspace config url munderseth.testspace.com
+      - testspace results.xml
     key: push
     depends_on: git
