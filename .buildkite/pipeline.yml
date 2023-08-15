@@ -1,8 +1,8 @@
 steps:
   - label: git-repo
     commands:
-      - echo "clone build"
-      - git clone https://github.com/munderseth/my.buildkite.git
+      - echo "git head"
+      - git pull
     key: git
 
   - label: "Publish"
