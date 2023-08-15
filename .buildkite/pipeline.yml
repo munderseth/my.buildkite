@@ -10,7 +10,8 @@ steps:
 
   - label: "Publish"
     command: |
-      echo "Display Testspace version"
-      testspace -v
+      echo "Testspace push content"
+      testspace config url 45a1dedb94e4d841306f18f11f5591a937fc3884:@munderseth.testspace.com/munderseth:my.buildkite/main
+      testspace results.xml
     key: deploy
     depends_on: test

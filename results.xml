@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="example" tests="2" failures="0" time="2.0">
+  <testsuite name="TESTING">
+    <testcase classname="SUITE1" name="CASE 1" time="1.00"/>
+    <testcase classname="SUITE1" name="CASE 2" time="1.00">
+      <failure type="Exception" message="Something unexpected happened"/>
+    </testcase>
+    <testcase classname="SUITE1" name="CASE 3" time="1.00">
+      <failure type="Exception" message="Something unexpected happened"/>
+    </testcase>
+     <testcase classname="SUITE2" name="CASE 1" time="1.00"/>
+    <testcase classname="SUITE2" name="CASE 2" time="1.00">
+      <failure type="Exception" message="Something unexpected happened"/>
+    </testcase>
+    <testcase classname="SUITE2" name="CASE 3" time="1.00">
+      <failure type="Exception" message="Something unexpected happened"/>
+    </testcase>
+  </testsuite>
+</testsuites>
