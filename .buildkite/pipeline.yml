@@ -10,6 +10,7 @@ steps:
 
   - label: "Publish"
     command: |
-      echo "Launch the rocket"
+      echo "Display Testspace version"
+      testspace -v
     key: deploy
     depends_on: test
