@@ -2,8 +2,8 @@ steps:
   - label: "Publish"
     commands:
       - echo "Testspace push content"
-      #- set CI=true
-      - testspace config url munderseth.testspace.com
+      - set CI=true
+      #- testspace config url munderseth.testspace.com
       - testspace config
-      - testspace results.xml
+      - testspace results.xml "#Build %BUILDKITE_BUILD_NUMBER%"
     key: push
