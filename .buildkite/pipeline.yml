@@ -8,5 +8,7 @@ steps:
       #- testspace config url munderseth.testspace.com
       #- testspace config
       #- testspace results.xml "#Build %BUILDKITE_BUILD_NUMBER%"
-      - testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build %BUILDKITE_BUILD_NUMBER%"
+      #- testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build %BUILDKITE_BUILD_NUMBER%"
+      - testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build $BUILDKITE_BUILD_NUMBER"
+
     key: push
