@@ -1,11 +1,12 @@
 steps:
   - label: "🔨 Test"
-    command: "make test"
+    commands:
+      - echo "Try uploading JUnit"
     plugins:
       - test-collector#v1.10.0:
-          files: "./results.xml"
+          files: "results.xml"
           format: "junit"
-          
+
   - label: "Publish"
     commands:
       - echo "Testspace push content"
