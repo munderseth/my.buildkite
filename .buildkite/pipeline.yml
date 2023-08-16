@@ -2,6 +2,7 @@ steps:
   - label: "Publish"
     commands:
       - echo "Testspace push content"
-      - testspace config url munderseth.testspace.com
+      - testspace -v
+      #- testspace config url munderseth.testspace.com
       - testspace config
     key: push
