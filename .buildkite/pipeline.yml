@@ -13,14 +13,11 @@ steps:
       #- export PATH=$PATH:$HOME/testspace
       #- export CI=true
       #- set CI=true
-      - set CI_BUILD_NUMBER=%BUILDKITE_BUILD_NUMBER%
-      #- testspace config url munderseth.testspace.com
-      #- testspace config
-      # testspace results.xml "#Build %BUILDKITE_BUILD_NUMBER%"
-      - testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build %BUILDKITE_BUILD_NUMBER%"
+      #- set CI_BUILD_NUMBER=%BUILDKITE_BUILD_NUMBER%
+      - testspace config url munderseth.testspace.com
+      - testspace config
+      - testspace results.xml 
+      #- testspace results.xml "#Build %BUILDKITE_BUILD_NUMBER%"
+      #- testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build %BUILDKITE_BUILD_NUMBER%"
       #- testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build $BUILDKITE_BUILD_NUMBER"
     key: push
-  - label: "Diag Info"
-    commands:
-      - curl -H "Authorization: Bearer %BUILDKITE_AGENT_ACCESS_TOKEN%" "https://api.buildkite.com/v2/user"
-      - curl -H "Authorization: Bearer %BUILDKITE_AGENT_ACCESS_TOKEN%" "https://api.buildkite.com/v2/organizations/%BUILDKITE_ORGANIZATION_SLUG%/pipelines/%BUILDKITE_PIPELINE_SLUG%/builds/%BUILDKITE_BUILD_NUMBER%"
