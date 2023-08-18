@@ -1,8 +1,10 @@
+env:
+  # Anti-pattern, but this is a Sandbox only
+  BUILDKITE_ANALYTICS_TOKEN: ehRsnV46XFgoyE8SWLPRv2Dz
+
 steps:
   - label: "🔨 Test"
     command: echo "Try uploading JUnit"
-    env:
-      BUILDKITE_ANALYTICS_TOKEN: ehRsnV46XFgoyE8SWLPRv2Dz
     plugins:
       - test-collector#v1.10.0:
           files: "results.xml"
