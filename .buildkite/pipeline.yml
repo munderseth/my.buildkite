@@ -1,23 +1,16 @@
 steps:
   - label: "🔨 Test"
-    commands:
-      - echo "Try uploading JUnit"
+    command: echo "Try uploading JUnit"
+    env:
+      BUILDKITE_ANALYTICS_TOKEN: ehRsnV46XFgoyE8SWLPRv2Dz
     plugins:
       - test-collector#v1.10.0:
           files: "results.xml"
           format: "junit"
 
   - label: "Publish"
-    commands:
+    command:
       - echo "Testspace push content"
-      #- export PATH=$PATH:$HOME/testspace
-      #- export CI=true
-      #- set CI=true
-      #- set CI_BUILD_NUMBER=%BUILDKITE_BUILD_NUMBER%
       - testspace config url munderseth.testspace.com
-      - testspace config
-      - testspace results.xml 
-      #- testspace results.xml "#Build %BUILDKITE_BUILD_NUMBER%"
-      #- testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build %BUILDKITE_BUILD_NUMBER%"
-      #- testspace results.xml "munderseth.testspace.com/munderseth:my.buildkite/main#Build $BUILDKITE_BUILD_NUMBER"
+      - testspace results.xml
     key: push
