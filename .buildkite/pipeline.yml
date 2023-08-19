@@ -3,7 +3,7 @@ steps:
     command: echo "Try uploading JUnit"
     env:
       # Anti-pattern, but this is a Sandbox only
-      BUILDKITE_ANALYTICS_TOKEN: $$MY_BUILDKITE_TOKEN
+      #BUILDKITE_ANALYTICS_TOKEN: $$MY_BUILDKITE_TOKEN
     plugins:
       - test-collector#v1.10.0:
           files: "results.xml"
