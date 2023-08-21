@@ -4,6 +4,7 @@ steps:
     fields:
       - text: "Provide text please"
         key: "input"
+    key: "go"
   - label: "🔨 Test"
     command: echo "Try uploading JUnit"
     plugins:
@@ -17,5 +18,5 @@ steps:
       - testspace config url munderseth.testspace.com
       - testspace results.xml
     key: "push"
-    depends_on: "input"
+    depends_on: "go"
 
