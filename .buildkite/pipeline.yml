@@ -6,9 +6,15 @@ steps:
           files: "results.xml"
           format: "junit"
 
+  - label: :one-does-not-simply: My Input"
+    input: "Information please"
+    fields:
+      - text: "Provide text please"
+    key: "input"
   - label: "Publish"
     command:
       - echo "Testspace push content"
       - testspace config url munderseth.testspace.com
       - testspace results.xml
     key: push
+    depends_on: "input"
