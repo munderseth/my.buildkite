@@ -5,16 +5,15 @@ steps:
       - test-collector#v1.10.0:
           files: "results.xml"
           format: "junit"
-    key: test
+    key: "test"
   - label: ":one-does-not-simply: My Input"
     input: "Information please"
     fields:
       - text: "Provide text please"
-    key: input
+        key: "input"
   - label: "Publish"
     command:
       - echo "Testspace push content"
       - testspace config url munderseth.testspace.com
       - testspace results.xml
-    key: push
-    depends_on: input
+    key: "push"
