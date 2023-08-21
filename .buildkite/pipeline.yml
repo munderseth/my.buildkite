@@ -11,10 +11,11 @@ steps:
     fields:
       - text: "Provide text please"
         key: "input"
+  - wait
   - label: "Publish"
     command:
       - echo "Testspace push content"
       - testspace config url munderseth.testspace.com
       - testspace results.xml
     key: "push"
-    depends_on: "input"
+
