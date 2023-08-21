@@ -6,7 +6,7 @@ steps:
           files: "results.xml"
           format: "junit"
 
-  - label: :one-does-not-simply: My Input"
+  - label: ":one-does-not-simply: My Input"
     input: "Information please"
     fields:
       - text: "Provide text please"
