@@ -3,7 +3,7 @@ steps:
     input: "Information please"
     fields:
       - text: "Provide text please"
-    key: "input"
+        key: "input"
   - label: "🔨 Test"
     command: echo "Try uploading JUnit"
     plugins:
